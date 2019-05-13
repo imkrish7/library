@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  
+</head>
+<body>
+
+  <div class="landing">
+    <div class="manipulation">
+      <div class="head">
+        <h1><%= title %></h1>
+        <p>Welcome to <%= title %></p>
+      </div>
+      <div class="books"></div>
+      <div class="model">
+        <div class="addbook" id="add">
+          <form action="" method="post">
+            <input type="text" name="" id="" class="bookname" placeholder="Enter new book title">
+            <br>
+            <button type="submit" class="btn">Add</button>
+          </form>
+        </div>
+        <div class="getbook" id="get">
+          <form action="" method="post">
+            <input type="text" name="" id="" placeholder="Enter book name">
+            <br>
+            <button type="submit" class="btn">Search</button>
+          </form>
+        </div>
+        <div class="addcomment" id="comment">
+          <form action="" method="post">
+            <input type="text" name="" id="" placeholder="Enter book name">
+            <br>
+            <input type="text" name="" id="" class="comment" placeholder="Comment">
+            <br>
+            <button type="submit" class="btn">Comment</button>
+          </form>
+        </div>
+        <div class="delete" id="delete">
+              <form action="" method="post">
+              <input type="text" name="" id="" class="bookname" placeholder="Enter new book title">
+              <br>
+              <button type="submit" class="btn">Delete</button>
+            </form>
+        </div>
+        <div class="alldelete" id="alldelete">
+          <form action="">
+            <button type="submit" class="btn">All Delete</button>
+          </form>
+          
+        </div>
+      
+        <select id="option" onchange="run()" class="opt">
+          <option value="add">Add</option>
+          <option value="get">Search</option>
+          <option value="delete">Delete</option>
+          <option value="alldelete">All Delete</option>
+          <option value="comment">Comment</option>
+        </select>
+        
+      </div>  
+    </div>
+    <div class="books-details">
+      <h1>Book Details</h1>
+    </div>
+  </div>
+  <div class="usage">
+    <div class="userStory">
+      <h2>User Story </h2>
+      <ol>
+        <li>Nothing from my website will be cached in my client as a security measure.</li>
+        <li>I will see that the site is powered by 'PHP 4.2.0' even though it isn't as a security measure.</li>
+        <li>I can post a title to /api/books to add a book and returned will be the object with the title and a unique
+          _id.</li>
+        <li>I can get /api/books to retrieve an aray of all books containing title, _id, & commentcount.</li>
+        <li>I can get /api/books/{_id} to retrieve a single object of a book containing title, _id, & an array of
+          comments
+          (empty array if no comments present).</li>
+        <li>I can post a comment to /api/books/{_id} to add a comment to a book and returned will be the books object
+          similar to get /api/books/{_id}.</li>
+        <li>I can delete /api/books/{_id} to delete a book from the collection. Returned will be 'delete successful' if
+          successful.</li>
+        <li>If I try to request a book that doesn't exist I will get a 'no book exists' message.</li>
+        <li>I can send a delete request to /api/books to delete all books in the database. Returned will be 'complete
+          delete
+          successful' if successful.</li>
+        <li>All 6 functional tests requiered are complete and passing.</li>
+
+      </ol>
+    </div>
+    <div class="api-table">
+      <table>
+        <tr>
+          <th>API</th>
+          <th>GET</th>
+          <th>POST</th>
+          <th>DELETE</th>
+        </tr>
+        <tr>
+          <td>/api/books</td>
+          <td>list all books</td>
+          <td>add new book</td>
+          <td>Delete all books</td>
+        </tr>
+        <tr>
+          <td>/api/books/:id</td>
+          <td>show book id</td>
+          <td>add comment to book id</td>
+          <td>delete id</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <footer>
+   <a href="http://">By Krishna</a>
+    <p>A freeCodecamp Project</p>
+  </footer>
+<script src="/javascripts/client.js">
+  </script>
+</body>
+
+</html>
