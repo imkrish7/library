@@ -14,61 +14,61 @@
         <h1><%= title %></h1>
         <p>Welcome to <%= title %></p>
       </div>
-      <div class="books"></div>
+      <div class="books">
+        <ul class="booklist" id="booklist"></ul>
+      </div>
       <div class="model">
         <div class="addbook" id="add">
-          <form action="" method="post">
-            <input type="text" name="" id="" class="bookname" placeholder="Enter new book title">
+          <form action="/api/books" method="post">
+            <input type="text" name="bookname"  class="bookname" placeholder="Enter new book title" required>
             <br>
             <button type="submit" class="btn">Add</button>
           </form>
         </div>
-        <div class="getbook" id="get">
-          <form action="" method="post">
-            <input type="text" name="" id="" placeholder="Enter book name">
+        <div class="getbook" id="getbook">
+          <form action="/api/book" method="get">
+            <input type="text" name="title"  placeholder="Enter book name">
             <br>
             <button type="submit" class="btn">Search</button>
           </form>
         </div>
         <div class="addcomment" id="comment">
-          <form action="" method="post">
-            <input type="text" name="" id="" placeholder="Enter book name">
+            <input type="text" name="title" id="title" placeholder="Enter book name">
             <br>
-            <input type="text" name="" id="" class="comment" placeholder="Comment">
+            <input type="text" name="comment" id="commenttext" class="comment" placeholder="Comment">
             <br>
-            <button type="submit" class="btn">Comment</button>
-          </form>
+            <button type="submit" id="coment" class="btn">Comment</button>
         </div>
-        <div class="delete" id="delete">
-              <form action="" method="post">
-              <input type="text" name="" id="" class="bookname" placeholder="Enter new book title">
+        <div class="delete" id="delete">              
+              <input type="text" name="title" id="name" class="bookname" placeholder="Enter new book title">
               <br>
-              <button type="submit" class="btn">Delete</button>
-            </form>
+              <button type="submit" id="delet" class="btn">Delete</button>
         </div>
         <div class="alldelete" id="alldelete">
-          <form action="">
-            <button type="submit" class="btn">All Delete</button>
-          </form>
+            <button type="submit" id="alldelet" class="btn">All Delete</button>
         </div>
         <div class="allbooks" id="allbooks">
-          <form action="">
+          <form action="/api/books" method="get">
             <button type="submit" class="btn">All Books</button>
           </form>
         </div>
         <select id="option" onchange="run()" class="opt">
           <option value="add">Add</option>
-          <option value="get">Search</option>
+          <option value="getbook">Search</option>
           <option value="allbooks">All Books</option>
           <option value="delete">Delete</option>
           <option value="alldelete">All Delete</option>
           <option value="comment">Comment</option>
-        </select>
-        
+        </select> 
+      </div>
+      <div class="commentsection">
+        <h1>Comments</h1>
+        <ul id="commentlist"></ul>
       </div>  
     </div>
     <div class="books-details">
       <h1>Book Details</h1>
+      <ul id="bookdetails"></ul>
     </div>
   </div>
   <div class="usage">

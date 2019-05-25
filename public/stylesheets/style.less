@@ -16,17 +16,17 @@ body {
 }
 
 .head{
-  padding: 50px;
-   color:#ff2a2a;
+  padding: 45px;
+   color: #a20000;
 }
-.books{
-  width:60%;
+.head h1{
+  font-size: 35px;
 }
 .books-details{
   position: relative;
   right:0;
-  width:40%;
-  background:#d40000;
+  width:30%;
+  background:#a20000;
   height:100vh;  
   color:#fff;
   padding: 50px;
@@ -36,7 +36,7 @@ body {
   width:700px;
   box-shadow: 0px 0px 5px 2px #5f3b43;
   padding: 40px;
-  background:#d40000;
+  background:#a20000;
 }
 .userStory ol{
   font-size: 20px;
@@ -60,7 +60,7 @@ table{
   
 }
 .manipulation{
-  width:60%;
+  width:70%;
   position: relative;
  background:#dcdbdb;
 }
@@ -68,7 +68,7 @@ table{
   position: absolute;
   width:400px;
   height: 280px;
-  border:2px solid #ff2a2a;
+  border:2px solid #a20000;
   padding: 20px;
   box-shadow: -1px 0px 5px 1px #403131;
   bottom:0;
@@ -81,9 +81,8 @@ table{
   border:none;
   width:100px;
   height: 48px;
-  color:#ff2a2a;
-  // font-weight: bolder;
-  border:2px solid #ff2a2a;
+  color:#a20000;
+  border:2px solid #a20000;
   font-size:20px;
   box-shadow: -1px 0px 3px 1px #381b1b  ;
 }
@@ -103,7 +102,7 @@ table{
   font-size:20px;
   padding:5px;
   right:0;
-  border:2px solid #ff2a2a;
+  border:2px solid #a20000;
 }
 
 a {
@@ -129,10 +128,99 @@ a{
   position: absolute;
   height: 48px;
   width:120px;
-  border:2px solid #d40000;
+  border:2px solid #a20000;
   bottom: 0;
   left:0; 
-  color:#d40000;
+  color:#a20000;
   font-size:20px;
   padding: 2px;    
+}
+.books{
+  width:100%;
+  height:220px;
+  overflow: scroll;
+  overflow-x:hidden;
+}
+.booklist{
+  
+  width:100%;
+  height: 100%;
+  
+  
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+#booklist li{
+    // overflow: hidden;
+    display: inline-block;
+    margin:10px;
+    padding: 10px;
+    border-radius: 4px;
+    border:1px solid #a20000;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    color: #a20000;
+}
+#bookdetails li{
+  list-style: none;
+  font-size:20px;
+  margin:10px;
+}
+
+.commentsection{
+  margin-left:20px;
+  position: absolute;
+  bottom:0;
+  left:400px;
+  color:#a20000;
+  border:2px solid #a20000;
+  width:500px;
+  height:280px;
+  padding: 20px; 
+  box-shadow: -1px 0px 5px 1px #403131;
+  overflow:scroll;
+  overflow-x:hidden;
+}
+
+#commentlist{
+list-style: none;
+}
+#commentlist li{
+  padding:10px;
+  font-size: 20px;
+}
+
+.com{
+  // padding:10px;
+  height: 35px;
+  // border-radius:5px; 
+  color: #fff;
+}
+
+.edit{
+     border: 1px solid #319e31;
+     background: #289228;
+     
+     box-shadow:none;
+}
+.del{
+      border: 1px solid #b74d4d;
+      background: #961919;
+      box-shadow: none;
+}
+
+.newcomblock{
+  display:none;
+}
+.editsub{
+  height: 35px;
+      border: 1px solid #d7da34;
+      background: #c2ec19;
+      color: #fff;
+      box-shadow: none;
+}
+#newcom{
+  height: 35px;
 }
